@@ -73,7 +73,7 @@ if file:
 
     if options == 'Data':
         data(df)
-    elif options == 'Plots'
+    elif options == 'Plots':
         plots(data())
 
 
