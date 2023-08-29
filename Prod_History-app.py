@@ -45,11 +45,11 @@ with st.sidebar:options = \
 #Subir archivo
 file = st.sidebar.file_uploader('Upload you .xlsx file')
 #Mostrar dataframe
-def data(volvefield):
+def data(dataframe):
     st.subheader("Field's Data")
-    st.write(volvefield.head())
+    st.write(dataframe.head())
     st.subheader('Summary')
-    st.write(volvefield.describe())
+    st.write(dataframe.describe())
 
 def plots(volvefield):
     Volo = volvefield['BORE_OIL_VOL']
@@ -67,7 +67,8 @@ def plots(volvefield):
     ax.grid()
     plt.show()
 
-#% Call data
+#Call data
+
 if file:
     df =pd.read_excel(file)
 
